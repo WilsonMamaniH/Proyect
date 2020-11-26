@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>DESAFIO SEGUNDO</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="ejercicios.html">EJERCICIOS 1</a></li>
+        <li><a href="juego.html">JUEGO</a></li>
+        <li><a href="#">DESAFIO 2</a></li>
+        <li><a href="test.html">TEST</a></li>
+    </ul>
+    <br />
+    <section class="container">
+        <p class="titulo"><strong>a) Realizar un script para calcular las combinaciones mediante factoriales</strong></p>
+        <br />
+        <br />
+
+        <div>
+            <div class="col-md-6">
+                <img src="incisoa.jpg" width="300" height="200" />
+            </div>
+            <div class="col-md-6 ventana10">
+                <form id="formulario" name="" method="post">
+                    <label>Valor X: </label>
+                    <input type="number" name="" id="valorx" autofocus placeholder="Escribe un Numero" />
+                    <button class="btn btn-primary" onclick="limpiar();">Limpiar Datos</button>
+                    <br />
+                    <br />
+
+                    <label>Valor Y: </label>
+                    <input type="number" name="" id="valory" placeholder="Escribe un Numero" />
+                    <br />
+                    <br />
+
+                    <button class="btn btn-primary" type="button" onclick="coeficiente_binomial();">CALCULAR</button>
+                    <br />
+                    <br />
+
+                    <p><strong>El Coeficiente Binomial es:   <span id="resultado"></span></strong></p>
+                </form>
+            </div>
+        </div>
+    </section>
+    <br />
+    <br />
+    <br />
+
+    <section class="container">
+
+        <p class="titulo"><strong>b) Realizar un script para sumar los dígitos de un numero dado: 234= 2+3+4=9</strong></p>
+        <br />
+        <br />
+
+        <div>
+            <div class="col-md-6">
+                <img src="incisob.jpg" width="230" height="150" />
+            </div>
+            <div class="col-md-6 ventana10">
+                <form id="formulario" method="post">
+                    <label>Numero:  </label>
+                    <input type="number" id="numero" autofocus placeholder="Escribe un Número" />
+                    <button class="btn btn-primary" onclick="limpiar2();">Limpiar Datos</button>
+                    <br />
+                    <br />
+
+                    <button class="btn btn-primary" type="button" onclick="sumar();">CALCULAR SUMA DE DIGITOS</button>
+                    <br />
+                    <br />
+
+                    <p><strong>La suma de los digitos es:    <span id="sumatoria"></span></strong></p>
+                </form>
+            </div>
+        </div>
+    </section>
+    <br />
+    <br />
+    <br />
+
+    <section class="container">
+        <p class="titulo"><strong>c) Determinar si un número es primo</strong></p>
+        <br />
+        <br />
+
+        <div>
+            <div class="col-md-6">
+                <img src="incisoc.jpg" width="230" height="150" />
+            </div>
+            <div class="col-md-6 ventana10">
+                <form id="formulario" method="post">
+                    <label>Numero:  </label>
+                    <input type="number" id="primo" autofocus placeholder="Escribe un Número" />
+                    <button class="btn btn-primary" onclick="limpiar2();">Limpiar Datos</button>
+                    <br />
+                    <br />
+
+                    <button class="btn btn-primary" type="button" onclick="primos();">VERIFICAR SI ES PRIMO</button>
+                    <br />
+                    <br />
+
+                    <p><strong>El numero:   <span id="esprimo"></span></strong></p>
+
+                </form>
+            </div>
+        </div>
+    </section>
+    <br />
+    <br />
+    <br />
+
+    <section class="foter">
+        <div class="container">
+            <p class="titulo"><strong>d) Encontrar las raíces de una ecuación de 2do. Grado, dados (a,b,c)</strong></p>
+            <br />
+            <br />
+            <div>
+                <div class="col-md-6">
+                    <img src="incisod.jpg" width="400" height="300" />
+                </div>
+                <div class="col-md-6 ventana10">
+                    <form id="formulario" method="post">
+                        <label>Valor "a":  </label>
+                        <input type="number" id="valor1" autofocus placeholder="Escribe un Número" />
+                        <button class="btn btn-primary" onclick="limpiar2();">Limpiar Datos</button>
+                        <br />
+                        <br />
+
+                        <label>Valor "b":  </label>
+                        <input type="number" id="valor2" autofocus placeholder="Escribe un Número" />
+                        <br />
+                        <br />
+
+                        <label>Valor "c":  </label>
+                        <input type="number" id="valor3" autofocus placeholder="Escribe un Número" />
+                        <br />
+                        <br />
+
+
+                        <button class="btn btn-primary" type="button" onclick="sacar_raiz();">SACAR RAIZ</button>
+                        <br />
+                        <br />
+
+                        <p><strong>El Discriminante es:   <span id="discriminante"></span></strong></p>
+                        <p><strong>Las Primera Raiz:   <span id="raices1"></span></strong></p>
+                        <p><strong>Las Segunda Raiz:   <span id="raices2"></span></strong></p>
+                        <p><strong>Tiene:   <span id="final"></span></strong></p>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>
+            <strong>Derechos reservados</strong><br />
+            <strong>Nombre: Wilson Mamani Huaraco</strong>
+        </p>
+    </footer>
+
+    <script type="text/javascript" src="script0.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1,shrink-to-fit=no">
+        <meta name="description" content="Jugar memorama en línea">
+        <title>Juego de Javascript</title>
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <link href="./css/style.css" rel="stylesheet">
+         <link href="estilos.css" rel="stylesheet">
+    </head>
+    <body >
+        
+        <ul class="menu">
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="ejercicios.html">EJERCICIOS 1</a></li>
+            <li><a href="#">JUEGO</a></li>
+            <li><a href="Desafio.html">DESAFIO 2</a></li>
+            <li><a href="test.html">TEST</a></li>
+        </ul>
+        <br />
+        <br />
+        <div class="container">
+            <main role="main" class="container-fluid" id="app">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="text-center">Juego de Coincidencias</h1>
+                        <p>
+                            <span class="h5">Intentos: </span>
+                            {{intentos}}/{{MAXIMOS_INTENTOS}}&nbsp;<span class="h5">
+                                Aciertos:
+                            </span> {{aciertos}}
+                            <br><a @click="mostrarCreditos" href="#">Reglas</a>
+                        </p>
+                    </div>
+                </div>
+                <div v-for="(fila, indiceFila) in memorama" :key="indiceFila"
+                     class="row">
+                    <div :key="indiceFila+''+indiceImagen" class="col-3"
+                         v-for="(imagen, indiceImagen) in fila">
+                        <div class="mb-3">
+                            <img @click="voltear(indiceFila, indiceImagen)"
+                                 :class="{'girar': imagen.mostrar}"
+                                 :src="(imagen.mostrar ? imagen.ruta :
+                            NOMBRE_IMAGEN_OCULTA)" class="card-img-top img-fluid
+                            img-thumbnail">
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer>
+            <p>
+                <strong>Derechos reservados</strong><br />
+                <strong>Nombre: Wilson Mamani Huaraco</strong>
+            </p>
+        </footer>
+
+        <script src="./js/sweetalert2.all.min.js"></script>
+        <script src="./js/vue.min.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+
+</html>
